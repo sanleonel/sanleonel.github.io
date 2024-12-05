@@ -1653,7 +1653,7 @@ section,
 }
 
 
-.services button[type=submit] {
+.btn-cta {
     color: var(--contrast-color);
     background: var(--accent-color);
     border: 0;
@@ -1665,66 +1665,98 @@ section,
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
-.team .member {
-  background-color: var(--surface-color);
-  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  border-radius: 15px;
-  padding: 15px;
-  overflow: hidden;
+.team .team-member .member-img, .page-title-team .team-member .member-img {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    background: var(--surface-color);
 }
 
-.team .member img {
-  border-radius: 15px;
-  overflow: hidden;
+.team .team-member .social {
+    position: absolute;
+    left: 0;
+    top: -18px;
+    right: 0;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.team .member .member-content {
-  padding: 0 20px 30px 20px;
+    .team .team-member .social a {
+        transition: color 0.3s;
+        color: var(--contrast-color);
+        background: var(--accent-color);
+        margin: 0 5px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+        .team .team-member .social a i {
+            line-height: 0;
+            font-size: 16px;
+        }
+
+        .team .team-member .social a:hover {
+            background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
+        }
+
+    .team .team-member .social i {
+        font-size: 18px;
+        margin: 0 2px;
+    }
+
+.team .team-member .member-info {
+    background-color: var(--surface-color);
+    padding: 30px 15px;
+    text-align: center;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    background: var(--surface-color);
+    margin: -50px 20px 0 20px;
+    position: relative;
+}
+.page-title-team .team-member .member-info h4, .page-title-team .team-member .member-info span {
+    color: #000 !important;
+}
+        .page-title-team .team-member .member-info {
+    background-color: var(--surface-color);
+    padding: 30px 15px;
+    text-align: center;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    margin: -50px 20px 0 20px;
+    position: relative;
+    border-radius: 8px;
 }
 
-.team .member h4 {
-  font-weight: 700;
-  margin-top: 16px;
-  margin-bottom: 2px;
-  font-size: 20px;
-}
+    .team .team-member .member-info h4, .page-title-team .team-member .member-info h4 {
+        font-weight: 500;
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
 
-.team .member span {
-  font-style: italic;
-  display: block;
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
+    .team .team-member .member-info span, .page-title-team .team-member .member-info span {
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+    }
 
-.team .member .social {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
+    .team .team-member .member-info p, .page-title-team .team-member .member-info p {
+        font-style: italic;
+        font-size: 14px;
+        line-height: 26px;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+    }
 
-.team .member .social a {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-  transition: 0.3s;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 60%);
-}
-
-.team .member .social a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.team .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
+.team .team-member:hover .social {
+    opacity: 1;
 }
 
 /*--------------------------------------------------------------
@@ -2975,3 +3007,53 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+
+/*--------------------------------------------------------------
+# Global Page Titles Team & Breadcrumbs
+--------------------------------------------------------------*/
+.page-title-team {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 140px 0;
+    text-align: center;
+    position: relative;
+}
+
+    .page-title-team:before {
+        content: "";
+        background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+        position: absolute;
+        inset: 0;
+    }
+
+    .page-title-team h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .page-title-team .breadcrumbs ol {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+        .page-title-team .breadcrumbs ol li + li {
+            padding-left: 10px;
+        }
+
+            .page-title-team .breadcrumbs ol li + li::before {
+                content: "/";
+                display: inline-block;
+                padding-right: 10px;
+                color: color-mix(in srgb, var(--default-color), transparent 50%);
+            }

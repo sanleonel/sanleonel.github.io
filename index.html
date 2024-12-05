@@ -68,10 +68,14 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html" class="active">Inicio<br></a></li>
-            <li><a href="vecinos.html">Vecinos</a></li>
-            <li><a href="#">Necesidades</a></li>
-            <li><a href="#">Propuestas</a></li>
-            <li><a href="#">Comunicación</a></li>
+            <li class="dropdown">
+                <a href="#"><span>Nosotros</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                    <li><a href="d_142.html">Demarcación 142</a></li>
+                    <li><a href="#">Demarcación 149</a></li>
+                </ul>
+            </li>
+           
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -95,7 +99,7 @@
             </div>
         </div>
     </div>-->
-      
+
       <section id="hero" class="hero section dark-background">
 
           <img src="assets/img/cta-bg.jpg" alt="" data-aos="fade-in" class="aos-init aos-animate">
@@ -108,7 +112,7 @@
                       <h2 class="text-uppercase">la voz de san leonel</h2>
                       <h3 class="fw-bold">Planilla 1</h3>
 
-                     
+
                   </div>
               </div>
 
@@ -126,12 +130,12 @@
       </section>
 
 
-      <!-- About Section -->
+      <!-- Planillas Unidas-->
       <section id="about" class="about section">
 
           <!-- Section Title -->
           <div class="container section-title" data-aos="fade-up">
-              <h2>Planillas Unidas<br></h2>
+              <h2>Planillas unidas<br></h2>
               <!--<p> </p>-->
           </div>
 
@@ -140,7 +144,7 @@
               <div class="row gy-4">
                   <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                       <!--<h3></h3>-->
-                      <img src="assets/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
+                      <img src="assets/img/voice/sanleonel.jpg" class="img-fluid rounded-4 mb-4" alt="">
 
                   </div>
                   <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
@@ -155,6 +159,8 @@
                               <li><i class="bi bi-check-circle-fill"></i> <span>Gestión de recursos</span></li>
                               <li><i class="bi bi-check-circle-fill"></i> <span>Gestión de vigilancia</span></li>
                               <li><i class="bi bi-check-circle-fill"></i> <span>Gestión de incidencias de vandalismo, robos, violencia</span></li>
+                              <li><i class="bi bi-check-circle-fill"></i> <span>Marketplace</span></li>
+                              <li><i class="bi bi-check-circle-fill"></i> <span>Comunicación</span></li>
                           </ul>
 
 
@@ -167,7 +173,41 @@
       </section>
 
 
+      <!-- Comunidad -->
+      <section id="community" class="community section">
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+              <h2>En beneficio de San Leonel<br></h2>
+          </div>
 
+          <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="row gy-4">
+                  <div class="col-lg-6 order-1 order-lg-2">
+                      <img src="assets/img/mapa.jpg" class="img-fluid" alt="">
+                  </div>
+                  <div class="col-lg-6 order-2 order-lg-1 content">
+                      
+                      <p>
+                          Como representantes de la colonia, trabajaremos con responsabilidad y serviremos a los colonos sin distinción alguna y nos esforzaremos para entregar buenos resultados en beneficio de nuestra comunidad
+                      </p>
+
+                      <p>
+                          Nuestro proyecto está respaldado por un uso inteligente de la tecnología, para lo cual implementaremos una app y/o un sistema web de la demarcación, que nos sirva para registrar a los vecinos; así como sus necesidades y propuestas para mejorar la calidad de vida de los que vivimos y/o invertimos nuestro patrimonio en esta demarcación
+                      </p>
+
+                      <p>
+                          <span class="fw-bold">
+                              Empatía, unidad, lealtad, honestidad, transparencia, compromiso e inteligencia tecnológica
+                          </span>
+                      son los valores con los que nos identificamos y respaldaran nuestros acciones e iniciativas
+                      </p>
+                  </div>
+              </div>
+
+          </div>
+
+      </section>
       <!-- La voz de San Leonel -->
       <section id="services" class="services section">
 
@@ -191,8 +231,8 @@
                               <a href="service-details.html" class="stretched-link">
                                   <h3>La voz de los animales</h3>
                               </a>
-                              <div class="col-md-12 text-center">
-                                  <button type="submit">Conocer más</button>
+                              <div class="col-md-12 text-center mt-3">
+                                  <a href="#" class="btn-cta">Conocer más</a>
                               </div>
                           </div>
                       </div>
@@ -208,8 +248,8 @@
                               <a href="service-details.html" class="stretched-link">
                                   <h3>La voz de los jóvenes</h3>
                               </a>
-                              <div class="col-md-12 text-center">
-                                  <button type="submit">Conocer más</button>
+                              <div class="col-md-12 text-center mt-3">
+                                  <a href="#" class="btn-cta">Conocer más</a>
                               </div>
                           </div>
                       </div>
@@ -225,8 +265,8 @@
                               <a href="service-details.html" class="stretched-link">
                                   <h3>La voz de las escuelas</h3>
                               </a>
-                              <div class="col-md-12 text-center">
-                                  <button type="submit">Conocer más</button>
+                              <div class="col-md-12 text-center mt-3">
+                                  <a href="#" class="btn-cta">Conocer más</a>
                               </div>
                           </div>
                       </div>
@@ -242,8 +282,8 @@
                               <a href="service-details.html" class="stretched-link">
                                   <h3>La voz de la naturaleza</h3>
                               </a>
-                              <div class="col-md-12 text-center">
-                                  <button type="submit">Conocer más</button>
+                              <div class="col-md-12 text-center mt-3">
+                                  <a href="#" class="btn-cta">Conocer más</a>
                               </div>
                               <a href="service-details.html" class="stretched-link"></a>
                           </div>
@@ -260,8 +300,8 @@
                               <a href="service-details.html" class="stretched-link">
                                   <h3>La voz de los comerciantes</h3>
                               </a>
-                              <div class="col-md-12 text-center">
-                                  <button type="submit">Conocer más</button>
+                              <div class="col-md-12 text-center mt-3">
+                                  <a href="#" class="btn-cta">Conocer más</a>
                               </div>
                               <a href="service-details.html" class="stretched-link"></a>
                           </div>
@@ -278,8 +318,8 @@
                               <a href="service-details.html" class="stretched-link">
                                   <h3>La voz de las mujeres</h3>
                               </a>
-                              <div class="col-md-12 text-center">
-                                  <button type="submit">Conocer más</button>
+                              <div class="col-md-12 text-center mt-3">
+                                  <a href="#" class="btn-cta">Conocer más</a>
                               </div>
                               <a href="service-details.html" class="stretched-link"></a>
                           </div>
@@ -292,12 +332,12 @@
                               <img src="assets/img/voice/seguridad.jpg" class="img-fluid" alt="">
                           </div>
                           <div class="details position-relative">
-                             
+
                               <a href="service-details.html" class="stretched-link">
                                   <h3>La voz de la seguridad</h3>
                               </a>
-                              <div class="col-md-12 text-center">
-                                  <button type="submit">Conocer más</button>
+                              <div class="col-md-12 text-center mt-3">
+                                  <a href="#" class="btn-cta">Conocer más</a>
                               </div>
                               <a href="service-details.html" class="stretched-link"></a>
                           </div>
