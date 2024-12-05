@@ -1376,85 +1376,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
-.services .service-item {
-  background-color: var(--surface-color);
-  padding: 40px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-  height: 100%;
-}
-
-.services .service-item .icon {
-  width: 48px;
-  height: 48px;
-  position: relative;
-  margin-bottom: 50px;
-}
-
-.services .service-item .icon i {
-  color: color-mix(in srgb, var(--heading-color), transparent 30%);
-  font-size: 56px;
-  transition: ease-in-out 0.3s;
-  z-index: 2;
-  position: relative;
-}
-
-.services .service-item .icon:before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  background: color-mix(in srgb, var(--heading-color), transparent 95%);
-  border-radius: 50px;
-  z-index: 1;
-  top: 10px;
-  right: -20px;
-  transition: 0.3s;
-}
-
-.services .service-item h3 {
-  color: color-mix(in srgb, var(--heading-color), transparent 20%);
-  font-weight: 700;
-  margin: 0 0 20px 0;
-  padding-bottom: 8px;
-  font-size: 22px;
-  position: relative;
-  display: inline-block;
-  border-bottom: 4px solid color-mix(in srgb, var(--heading-color), transparent 90%);
-  transition: 0.3s;
-}
-
-.services .service-item p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .service-item .readmore {
-  margin-top: 15px;
-  display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.services .service-item:hover .icon i {
-  color: var(--heading-color);
-}
-
-.services .service-item:hover .icon:before {
-  background: color-mix(in srgb, var(--accent-color), transparent 50%);
-}
-
-.services .service-item:hover h3 {
-  border-color: color-mix(in srgb, var(--accent-color), transparent 10%);
-  color: var(--heading-color);
-}
-
-.services .service-item:hover .readmore {
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials .testimonial-item {
@@ -1654,6 +1575,93 @@ section,
     .portfolio .portfolio-content:hover .readmore {
         color: var(--accent-color);
     }
+
+
+
+
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .img {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .services .img img {
+        transition: 0.6s;
+    }
+
+.services .details {
+    background: color-mix(in srgb, var(--surface-color), transparent 5%);
+    padding: 50px 30px;
+    margin: -100px 30px 0 30px;
+    transition: all ease-in-out 0.3s;
+    position: relative;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 0 25px rgba(0, 0, 0, 0.1);
+}
+
+    .services .details .icon {
+        margin: 0;
+        width: 72px;
+        height: 72px;
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        border: 6px solid var(--contrast-color);
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 28px;
+        transition: ease-in-out 0.3s;
+        position: absolute;
+        top: -36px;
+        left: calc(50% - 36px);
+    }
+
+    .services .details h3 {
+        font-weight: 700;
+        margin: 10px 0 15px 0;
+        font-size: 22px;
+        transition: ease-in-out 0.3s;
+    }
+
+    .services .details p {
+        color: color-mix(in srgb, var(--default-color), transparent 10%);
+        line-height: 24px;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+.services .service-item:hover .details h3 {
+    color: var(--accent-color);
+}
+
+.services .service-item:hover .details .icon {
+    background: var(--surface-color);
+    border: 2px solid var(--accent-color);
+}
+
+    .services .service-item:hover .details .icon i {
+        color: var(--accent-color);
+    }
+
+.services .service-item:hover .img img {
+    transform: scale(1.2);
+}
+
+
+.services button[type=submit] {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
